@@ -1,6 +1,8 @@
-version: 0.1
+version: 0.2
 phases:
-  install:
+install:
+    runtime-versions:
+      python: 3.7 
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket bala-lambda-pipelinedemo --output-template-file outputSamTemplate.yaml
 artifacts:
